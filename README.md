@@ -1,10 +1,9 @@
-# Ayan's Portfolio website [React Project]
+# Karira's Portfolio website [React Project]
 
-## Watch On YouTube ![YouTube Video Views](https://img.shields.io/youtube/views/esC2k9z7w2U?style=social) : [Watch Now][youtubelink]
 
-## Live Preview: [Open Link][preview]
 
-Coded by - [shaif Arfan](http://instagram.com/shaifarfan08) | [web cifar](http://webcifar.com)
+
+
 
 ![](./ReadMeImages/ReadMeBanner.png)
 
@@ -30,6 +29,7 @@ This is a beginner-friendly react js project. There will be a full free step-by-
 - Smooth Scrollbar
 - React Icons
 - React Router Dom
+- React-typical
 - More...
 
 ## Starter Files
