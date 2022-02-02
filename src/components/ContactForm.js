@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import emailJs from 'emailjs-com';
+
 const FormStyle = styled.form`
   width: 100%;
   .form-group {
@@ -43,6 +45,43 @@ export default function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [subject, setSubject] = useState('');
+
+  const templateParams = {
+    name,
+    email,
+    message,
+    subject,
+  };
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    if (name !== '' && email !== '' && message !== '' && subject !== '') {
+      emailJs
+        .send(
+          'service_clyal7z',
+          'template_gyvwmk5',
+          templateParams,
+          'user_roPlmnJSbYJLsHxZprAzF'
+        )
+        .then(
+          function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+            response.status(400).send({ message: 'message sent' });
+          },
+          function (error) {
+            console.log('FAILED...', error);
+          }
+        )
+        .catch((err) => console.log(`cannot send${err}`));
+
+      setEmail('');
+      setName('');
+      setSubject('');
+      setMessage('');
+    }
+  }
   return (
     <>
       <FormStyle>
@@ -55,6 +94,7 @@ export default function ContactForm() {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </label>
         </div>
@@ -67,6 +107,20 @@ export default function ContactForm() {
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </label>
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">
+            Subject
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              required
             />
           </label>
         </div>
@@ -79,10 +133,13 @@ export default function ContactForm() {
               name="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              required
             />
           </label>
         </div>
-        <button type="submit">Send</button>
+        <button type="submit" onClick={sendEmail}>
+          Send
+        </button>
       </FormStyle>
     </>
   );
