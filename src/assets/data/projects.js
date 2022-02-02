@@ -4,6 +4,7 @@ import UTrackerImg from '../images/keepnotes.PNG';
 import GreenCtgImg from '../images/waterpurifier.PNG';
 import CoinTrackerImg from '../images/groceryshop.PNG';
 import CavinImg from '../images/portfolio.PNG';
+import RealImg from '../images/realtimecomment.PNG';
 
 const projects = [
   {
@@ -37,6 +38,14 @@ const projects = [
       'This is my portfolio website. The portfolio is made using NodeJS and Turbo360 content management system.',
     img: CavinImg,
     link: 'https://my_world-z3rmou.vertex360.co/',
+  },
+  {
+    id: uuidv4(),
+    name: 'Realtime Comment System',
+    desc:
+      'This is a app that allows users to make comments and chat with each other in realtime',
+    img: RealImg,
+    link: 'https://realtime-comment-with-voice.herokuapp.com',
   },
 ];
 
