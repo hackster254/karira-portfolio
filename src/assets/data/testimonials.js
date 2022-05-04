@@ -25,8 +25,7 @@ const testimonials = [
     name: 'Electronics Engineering Intern',
     date: 'August - October 2019',
     org: 'Kenya Airports Authority',
-    desc:
-      'Really amazing communication skills. Always understand what I am trying to achieve. Also, his work is really amazing. Do really high-quality work.',
+    desc: 'Really amazing communication skills. Always understand what I am trying to achieve. Also, his work is really amazing. Do really high-quality work.',
     company: 'Huawei Seeds for future Internship',
     role: '',
     desc1: [
@@ -45,8 +44,7 @@ const testimonials = [
     name: 'Instrumentation and Control Engineering Attache',
     date: 'July - September 2018',
     org: 'Kenya Pipeline Company',
-    desc:
-      'Really hard-working person. Deliver the work as promised. Planning to work more with this person.',
+    desc: 'Really hard-working person. Deliver the work as promised. Planning to work more with this person.',
     course: '',
     uni: '',
     grad: '',
